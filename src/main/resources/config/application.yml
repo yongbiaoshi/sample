@@ -6,10 +6,10 @@ server:
     accesslog:
       enabled: true
 app:
-  base-package: com.my.sample.core
+  base-package: com.my.sample
 spring:
   application:
-    name: sample-core
+    name: sample-web
   profiles:
     include:
     - datasource
