@@ -1,0 +1,19 @@
+server:
+  port: 8080
+  servlet:
+    context-path: /
+spring:
+  application:
+    name: sample-redis
+  redis:
+    host: 192.168.1.242
+    port: 6379
+    database: 0
+    password: 123456
+    jedis:
+      pool:
+        min-idle: 0
+        max-active: 1000
+    sentinel:
+      master: mymaster
+      nodes: 192.168.1.242:63791,192.168.1.242:63792
