@@ -1,3 +1,5 @@
+app:
+  base-package: com.my.sample
 server:
   port: 8080
   servlet:
@@ -5,8 +7,6 @@ server:
   tomcat:
     accesslog:
       enabled: true
-app:
-  base-package: com.my.sample
 spring:
   application:
     name: sample-web

@@ -9,7 +9,7 @@ import org.springframework.scheduling.annotation.EnableAsync;
 @Configuration
 @MapperScan(basePackages = {"com.my.sample.mapper"})  // mybatis自动描包
 @EnableSwagger2Doc // 开启Swagger2，自动生成文档，Url：/swagger-ui.html
-@EnableConfigurationProperties(AppProperties.class)
+@EnableConfigurationProperties(value = {AppProperties.class})
 @EnableAsync
 public class AppConfig {
 

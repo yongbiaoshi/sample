@@ -4,11 +4,11 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.incar.sample</groupId>
-    <artifactId>sample-core</artifactId>
+    <artifactId>sample-web</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <packaging>jar</packaging>
 
-    <name>sample-core</name>
+    <name>sample-web</name>
     <description>基础工程示例</description>
 
     <parent>
@@ -27,6 +27,10 @@
     <dependencies>
         <dependency>
             <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-actuator</artifactId>
         </dependency>
         <dependency>
@@ -36,10 +40,6 @@
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-validation</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
         <dependency>
             <groupId>org.springframework.data</groupId>
@@ -98,16 +98,10 @@
             <artifactId>reactor-netty</artifactId>
             <version>0.7.6.RELEASE</version>
         </dependency>
-
         <dependency>
             <groupId>com.spring4all</groupId>
             <artifactId>swagger-spring-boot-starter</artifactId>
             <version>1.7.0.RELEASE</version>
-        </dependency>
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-autoconfigure</artifactId>
-            <version>2.0.2.RELEASE</version>
         </dependency>
         <dependency>
             <groupId>net.logstash.logback</groupId>
@@ -117,7 +111,7 @@
     </dependencies>
 
     <build>
-        <finalName>sample-core</finalName>
+        <finalName>sample-web</finalName>
         <plugins>
             <plugin>
                 <groupId>org.springframework.boot</groupId>
