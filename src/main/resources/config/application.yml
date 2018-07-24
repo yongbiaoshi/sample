@@ -1,3 +1,5 @@
+app:
+  base-package: com.my.sample
 server:
   port: 8080
   servlet:
@@ -5,6 +7,29 @@ server:
 spring:
   application:
     name: example-mongo
+  jackson:
+    date-format: yyyy-MM-dd HH:mm:ss
+    locale: zh_CN
+    time-zone: GMT+8
+  pid:
+    file: ${spring.application.name}.pid
+    fail-on-write-error: true
+  mvc:
+    date-format: yyyy-MM-dd HH:mm:ss
+    favicon:
+      enabled: true
+    throw-exception-if-no-handler-found: true
+    static-path-pattern: /**
+  http:
+    encoding:
+      charset: UTF-8
+      enabled: true
+      force: true
+    converters:
+      preferred-json-mapper: jackson
+  resources:
+    add-mappings: true
+    static-locations: classpath:/META-INF/resources/,classpath:/resources/,classpath:/static/,classpath:/public/
   data:
     mongodb:
       # MongoDB集群写法：mongodb://username:password@ip1:port1,ip2:port2,ip3:port3/ground
@@ -13,9 +38,28 @@ spring:
       pageable:
         one-indexed-parameters: true
         default-page-size: 10
-  jackson:
-    date-format: yyyy-MM-dd HH:mm:ss
-    locale: zh_CN
-    time-zone: GMT+8
+
 logging:
-  config: classpath:config/logback.xml
+  config: ${spring.config.location:classpath:config}/logback.xml
+
+#swagger config
+swagger:
+  title: 代码示例
+  description: 地网-代码示例
+  version: 0.0.1
+  contact:
+    name: shiyongbiao
+  base-package: ${app.base-package}
+  enabled: true
+management:
+  endpoints:
+    web:
+      exposure:
+        include:
+        - env
+        - health
+        - info
+        - configprops
+        - mappings
+        - scheduledtasks
+        - beans

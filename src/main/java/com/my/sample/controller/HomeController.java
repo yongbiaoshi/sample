@@ -8,13 +8,13 @@ import java.util.Date;
 @RestController
 public class HomeController {
 
-    @GetMapping("")
-    public String index() {
-        return "Spring Data MongoDB示例代码工程";
-    }
-
     @GetMapping("now")
     public Date now() {
         return new Date();
+    }
+
+    @GetMapping("hello")
+    public String hello(){
+        return "Hello Spring Boot!";
     }
 }
