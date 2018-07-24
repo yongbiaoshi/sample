@@ -1,3 +1,1 @@
-# sample
-代码示例
-**使用不同分支管理不同的代码示例**
+## Spring Data Mongo代码示例

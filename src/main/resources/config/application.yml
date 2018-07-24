@@ -1,0 +1,21 @@
+server:
+  port: 8080
+  servlet:
+    context-path: /
+spring:
+  application:
+    name: example-mongo
+  data:
+    mongodb:
+      # MongoDB集群写法：mongodb://username:password@ip1:port1,ip2:port2,ip3:port3/ground
+      uri: mongodb://192.168.1.242:27017/ground
+    web:
+      pageable:
+        one-indexed-parameters: true
+        default-page-size: 10
+  jackson:
+    date-format: yyyy-MM-dd HH:mm:ss
+    locale: zh_CN
+    time-zone: GMT+8
+logging:
+  config: classpath:config/logback.xml

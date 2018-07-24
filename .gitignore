@@ -1,7 +1,5 @@
 /target/
 !.mvn/wrapper/maven-wrapper.jar
-*.pid
-*.port
 
 ### STS ###
 .apt_generated
