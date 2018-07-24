@@ -29,7 +29,7 @@ spring:
   resources:
     add-mappings: true
     static-locations: classpath:/META-INF/resources/,classpath:/resources/,classpath:/static/,classpath:/public/
-    redis:
+  redis:
     host: 192.168.1.242
     port: 6379
     database: 0
